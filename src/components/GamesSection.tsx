@@ -50,7 +50,7 @@ const typedGamesData = gamesData as GamesData;
 
 export const GamesSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeTab, setActiveTab] = useState("featured");
+  const [activeTab, setActiveTab] = useState("all");
 
   const filterGames = (games: typeof typedGamesData.categories.featured.games) => {
     if (!searchTerm) return games;
@@ -92,12 +92,19 @@ export const GamesSection = () => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12 bg-card/50 backdrop-blur-sm">
-            <TabsTrigger value="featured">精選</TabsTrigger>
-            <TabsTrigger value="jk-series">JK系列</TabsTrigger>
-            <TabsTrigger value="hako">箱庭</TabsTrigger>
-            <TabsTrigger value="ebs">EBS</TabsTrigger>
-          </TabsList>
+          <div className="flex justify-center mb-12">
+            <TabsList className="inline-flex flex-wrap gap-2 h-auto bg-card/50 backdrop-blur-sm p-2">
+              <TabsTrigger value="all" className="min-w-[80px]">全部</TabsTrigger>
+              <TabsTrigger value="featured" className="min-w-[80px]">精選</TabsTrigger>
+              <TabsTrigger value="strategy" className="min-w-[80px]">策略</TabsTrigger>
+              <TabsTrigger value="rpg" className="min-w-[80px]">RPG</TabsTrigger>
+              <TabsTrigger value="simulation" className="min-w-[80px]">模擬</TabsTrigger>
+              <TabsTrigger value="battle" className="min-w-[80px]">對戰</TabsTrigger>
+              <TabsTrigger value="jk-series" className="min-w-[80px]">JK系列</TabsTrigger>
+              <TabsTrigger value="hako" className="min-w-[80px]">箱庭</TabsTrigger>
+              <TabsTrigger value="ebs" className="min-w-[80px]">EBS</TabsTrigger>
+            </TabsList>
+          </div>
 
           {Object.entries(typedGamesData.categories).map(([key, category]) => (
             <TabsContent key={key} value={key} className="animate-fade-in">

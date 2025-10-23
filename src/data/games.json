@@ -1,7 +1,7 @@
 {
   "categories": {
-    "featured": {
-      "name": "精選遊戲",
+    "all": {
+      "name": "全部遊戲",
       "games": [
         {
           "id": "jk-jianghu",
@@ -29,12 +29,7 @@
           "category": "策略",
           "players": "策略對戰",
           "image": "mecha-battle"
-        }
-      ]
-    },
-    "jk-series": {
-      "name": "JK 遊戲系列",
-      "games": [
+        },
         {
           "id": "petpk",
           "title": "寵物養成企劃",
@@ -196,6 +191,630 @@
           "category": "RPG",
           "players": "線上多人",
           "image": "wor"
+        },
+        {
+          "id": "php-eb",
+          "title": "無盡的戰鬥 php-eb 終極版",
+          "description": "原名 - 無盡的戰爭，JKGAME 更改遊戲程式更名為 - 機械人大戰。",
+          "url": "/php-eb/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "ebsII",
+          "title": "機械人大戰 第2代",
+          "description": "機械人大戰系列第二代作品，更豐富的戰鬥系統。",
+          "url": "/ebsII/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "ebsplus",
+          "title": "機械人大戰 Plus",
+          "description": "機械人大戰加強版本，新增更多機體和戰術。",
+          "url": "/ebsplus/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "ebs2",
+          "title": "機械人大戰 第1代",
+          "description": "機械人大戰系列第一代經典作品。",
+          "url": "/ebs2/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "hako6",
+          "title": "箱庭諸島 海戰",
+          "description": "箱庭諸島海戰版本，加入海戰元素的島嶼建設遊戲。",
+          "url": "/hako6/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako_php",
+          "title": "箱庭諸島 PHP",
+          "description": "PHP 版本的箱庭諸島，穩定流暢的遊戲體驗。",
+          "url": "/hako_php/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako5",
+          "title": "究想箱庭諸島",
+          "description": "箱庭諸島究想版，更豐富的遊戲內容和玩法。",
+          "url": "/hako5/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako3",
+          "title": "究想箱庭 R.A",
+          "description": "究想箱庭 R.A 版本，特別強化版。",
+          "url": "/hako3/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hakoii",
+          "title": "箱庭諸島 II",
+          "description": "箱庭諸島第二代，全新的島嶼經營體驗。",
+          "url": "/hakoii/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako",
+          "title": "箱庭諸島",
+          "description": "經典箱庭諸島遊戲，建設你的專屬島嶼。",
+          "url": "/hako/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        }
+      ]
+    },
+    "featured": {
+      "name": "精選遊戲",
+      "games": [
+        {
+          "id": "jk-jianghu",
+          "title": "JK 江湖",
+          "description": "2001年出品的網絡江湖，香港首個推出的江湖遊戲。2015年已重新修復無限任玩。",
+          "url": "http://jky.jkgame.com",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "jk-jianghu"
+        },
+        {
+          "id": "dos-games",
+          "title": "1900 款 DOS 遊戲",
+          "description": "經典 DOS 遊戲大集合，重溫童年回憶。包含各類經典遊戲，免下載即玩。",
+          "url": "http://dos.jkgame.com",
+          "category": "復古",
+          "players": "單人遊戲",
+          "image": "dos-games"
+        },
+        {
+          "id": "msvs",
+          "title": "機械人大戰 MSVS",
+          "description": "日本制作的經典遊戲，2004年改為中文版，繼續服務所有希望重溫的玩家。",
+          "url": "/msvs",
+          "category": "策略",
+          "players": "策略對戰",
+          "image": "mecha-battle"
+        },
+        {
+          "id": "br",
+          "title": "大逃殺",
+          "description": "生存競技遊戲，成為最後的倖存者。",
+          "url": "/br",
+          "category": "對戰",
+          "players": "多人對戰",
+          "image": "br"
+        },
+        {
+          "id": "ogame",
+          "title": "OGame (2021)",
+          "description": "銀河帝國策略遊戲，建立你的太空帝國。",
+          "url": "https://star.jkgame.com",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "ogame"
+        },
+        {
+          "id": "hako5",
+          "title": "究想箱庭諸島",
+          "description": "箱庭諸島究想版，更豐富的遊戲內容和玩法。",
+          "url": "/hako5/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        }
+      ]
+    },
+    "strategy": {
+      "name": "策略遊戲",
+      "games": [
+        {
+          "id": "msvs",
+          "title": "機械人大戰 MSVS",
+          "description": "日本制作的經典遊戲，2004年改為中文版，繼續服務所有希望重溫的玩家。",
+          "url": "/msvs",
+          "category": "策略",
+          "players": "策略對戰",
+          "image": "mecha-battle"
+        },
+        {
+          "id": "roses",
+          "title": "玫瑰戰爭",
+          "description": "策略戰爭遊戲，征服敵人，統一天下。",
+          "url": "/roses/",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "roses"
+        },
+        {
+          "id": "sangoku2",
+          "title": "超級三國志",
+          "description": "體驗三國時代的策略戰爭，統一三國。",
+          "url": "/sangoku2/",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "sangoku"
+        },
+        {
+          "id": "sangoku",
+          "title": "三國志.NET",
+          "description": "三國志網絡版，與玩家一起爭霸天下。",
+          "url": "/sangoku/",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "sangoku"
+        },
+        {
+          "id": "ogame",
+          "title": "OGame (2021)",
+          "description": "銀河帝國策略遊戲，建立你的太空帝國。",
+          "url": "https://star.jkgame.com",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "ogame"
+        },
+        {
+          "id": "php-eb",
+          "title": "無盡的戰鬥 php-eb 終極版",
+          "description": "原名 - 無盡的戰爭，JKGAME 更改遊戲程式更名為 - 機械人大戰。",
+          "url": "/php-eb/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "ebsII",
+          "title": "機械人大戰 第2代",
+          "description": "機械人大戰系列第二代作品，更豐富的戰鬥系統。",
+          "url": "/ebsII/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "ebsplus",
+          "title": "機械人大戰 Plus",
+          "description": "機械人大戰加強版本，新增更多機體和戰術。",
+          "url": "/ebsplus/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        },
+        {
+          "id": "ebs2",
+          "title": "機械人大戰 第1代",
+          "description": "機械人大戰系列第一代經典作品。",
+          "url": "/ebs2/",
+          "category": "策略",
+          "players": "線上對戰",
+          "image": "ebs-battle"
+        }
+      ]
+    },
+    "rpg": {
+      "name": "RPG 冒險",
+      "games": [
+        {
+          "id": "jk-jianghu",
+          "title": "JK 江湖",
+          "description": "2001年出品的網絡江湖，香港首個推出的江湖遊戲。2015年已重新修復無限任玩。",
+          "url": "http://jky.jkgame.com",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "jk-jianghu"
+        },
+        {
+          "id": "ffa",
+          "title": "超級太空戰士",
+          "description": "經典太空戰士系列遊戲，體驗史詩級的冒險旅程。",
+          "url": "/ffa/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "ffa"
+        },
+        {
+          "id": "ffa2",
+          "title": "超級太空戰士 2 服 (2018)",
+          "description": "超級太空戰士第二伺服器，2018年全新開放。",
+          "url": "/ffa2/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "ffa"
+        },
+        {
+          "id": "ore",
+          "title": "罪與罰Ⅱ",
+          "description": "角色扮演冒險遊戲，探索罪與罰的世界。",
+          "url": "/ore/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "ore"
+        },
+        {
+          "id": "sf2",
+          "title": "魔法冒險世界Ⅱ",
+          "description": "魔法與冒險的奇幻世界，展開你的魔法旅程。",
+          "url": "/sf2/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "sf2"
+        },
+        {
+          "id": "wor",
+          "title": "光明世界",
+          "description": "光明與黑暗的對決，選擇你的陣營。",
+          "url": "/wor/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "wor"
+        },
+        {
+          "id": "hero",
+          "title": "無限冒險",
+          "description": "踏上無盡的冒險旅程，探索未知的世界。",
+          "url": "/hero/",
+          "category": "冒險",
+          "players": "線上多人",
+          "image": "hero"
+        },
+        {
+          "id": "seaii",
+          "title": "航海時代加強版",
+          "description": "航海時代加強版，探索大海的奧秘，建立貿易帝國。",
+          "url": "/seaii/",
+          "category": "冒險",
+          "players": "線上多人",
+          "image": "sea"
+        },
+        {
+          "id": "sea",
+          "title": "航海時代",
+          "description": "經典航海時代遊戲，開啟你的航海冒險。",
+          "url": "/sea/",
+          "category": "冒險",
+          "players": "線上多人",
+          "image": "sea"
+        }
+      ]
+    },
+    "simulation": {
+      "name": "模擬經營",
+      "games": [
+        {
+          "id": "town",
+          "title": "模擬人生 (JK鎮)",
+          "description": "經營你的虛擬人生，在 JK 鎮中建立自己的事業與生活。",
+          "url": "/town/",
+          "category": "模擬",
+          "players": "線上多人",
+          "image": "town"
+        },
+        {
+          "id": "trade",
+          "title": "商人物語",
+          "description": "體驗商業經營的樂趣，建立你的商業帝國。",
+          "url": "/trade/",
+          "category": "經營",
+          "players": "線上多人",
+          "image": "trade"
+        },
+        {
+          "id": "hako6",
+          "title": "箱庭諸島 海戰",
+          "description": "箱庭諸島海戰版本，加入海戰元素的島嶼建設遊戲。",
+          "url": "/hako6/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako_php",
+          "title": "箱庭諸島 PHP",
+          "description": "PHP 版本的箱庭諸島，穩定流暢的遊戲體驗。",
+          "url": "/hako_php/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako5",
+          "title": "究想箱庭諸島",
+          "description": "箱庭諸島究想版，更豐富的遊戲內容和玩法。",
+          "url": "/hako5/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako3",
+          "title": "究想箱庭 R.A",
+          "description": "究想箱庭 R.A 版本，特別強化版。",
+          "url": "/hako3/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hakoii",
+          "title": "箱庭諸島 II",
+          "description": "箱庭諸島第二代，全新的島嶼經營體驗。",
+          "url": "/hakoii/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        },
+        {
+          "id": "hako",
+          "title": "箱庭諸島",
+          "description": "經典箱庭諸島遊戲，建設你的專屬島嶼。",
+          "url": "/hako/",
+          "category": "模擬經營",
+          "players": "線上多人",
+          "image": "hakoniwa"
+        }
+      ]
+    },
+    "battle": {
+      "name": "對戰競技",
+      "games": [
+        {
+          "id": "wog45",
+          "title": "Online FF Battle",
+          "description": "線上最終幻想戰鬥系統，即時對戰體驗。",
+          "url": "/wog45/",
+          "category": "對戰",
+          "players": "線上對戰",
+          "image": "ff-battle"
+        },
+        {
+          "id": "br",
+          "title": "大逃殺",
+          "description": "生存競技遊戲，成為最後的倖存者。",
+          "url": "/br",
+          "category": "對戰",
+          "players": "多人對戰",
+          "image": "br"
+        },
+        {
+          "id": "petpk",
+          "title": "寵物養成企劃",
+          "description": "培養你的專屬寵物，參與各種戰鬥和冒險。",
+          "url": "/petpk/",
+          "category": "養成",
+          "players": "線上多人",
+          "image": "petpk"
+        },
+        {
+          "id": "epet",
+          "title": "寵物大作戰",
+          "description": "收集和培養寵物，參與激烈的寵物對戰。",
+          "url": "/epet/",
+          "category": "養成",
+          "players": "線上對戰",
+          "image": "epet"
+        }
+      ]
+    },
+    "jk-series": {
+      "name": "JK 遊戲系列",
+      "games": [
+        {
+          "id": "jk-jianghu",
+          "title": "JK 江湖",
+          "description": "2001年出品的網絡江湖，香港首個推出的江湖遊戲。2015年已重新修復無限任玩。",
+          "url": "http://jky.jkgame.com",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "jk-jianghu"
+        },
+        {
+          "id": "petpk",
+          "title": "寵物養成企劃",
+          "description": "培養你的專屬寵物，參與各種戰鬥和冒險。",
+          "url": "/petpk/",
+          "category": "養成",
+          "players": "線上多人",
+          "image": "petpk"
+        },
+        {
+          "id": "town",
+          "title": "模擬人生 (JK鎮)",
+          "description": "經營你的虛擬人生，在 JK 鎮中建立自己的事業與生活。",
+          "url": "/town/",
+          "category": "模擬",
+          "players": "線上多人",
+          "image": "town"
+        },
+        {
+          "id": "ffa",
+          "title": "超級太空戰士",
+          "description": "經典太空戰士系列遊戲，體驗史詩級的冒險旅程。",
+          "url": "/ffa/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "ffa"
+        },
+        {
+          "id": "ffa2",
+          "title": "超級太空戰士 2 服 (2018)",
+          "description": "超級太空戰士第二伺服器，2018年全新開放。",
+          "url": "/ffa2/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "ffa"
+        },
+        {
+          "id": "wog45",
+          "title": "Online FF Battle",
+          "description": "線上最終幻想戰鬥系統，即時對戰體驗。",
+          "url": "/wog45/",
+          "category": "對戰",
+          "players": "線上對戰",
+          "image": "ff-battle"
+        },
+        {
+          "id": "trade",
+          "title": "商人物語",
+          "description": "體驗商業經營的樂趣，建立你的商業帝國。",
+          "url": "/trade/",
+          "category": "經營",
+          "players": "線上多人",
+          "image": "trade"
+        },
+        {
+          "id": "roses",
+          "title": "玫瑰戰爭",
+          "description": "策略戰爭遊戲，征服敵人，統一天下。",
+          "url": "/roses/",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "roses"
+        },
+        {
+          "id": "hero",
+          "title": "無限冒險",
+          "description": "踏上無盡的冒險旅程，探索未知的世界。",
+          "url": "/hero/",
+          "category": "冒險",
+          "players": "線上多人",
+          "image": "hero"
+        },
+        {
+          "id": "sangoku2",
+          "title": "超級三國志",
+          "description": "體驗三國時代的策略戰爭，統一三國。",
+          "url": "/sangoku2/",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "sangoku"
+        },
+        {
+          "id": "sangoku",
+          "title": "三國志.NET",
+          "description": "三國志網絡版，與玩家一起爭霸天下。",
+          "url": "/sangoku/",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "sangoku"
+        },
+        {
+          "id": "ore",
+          "title": "罪與罰Ⅱ",
+          "description": "角色扮演冒險遊戲，探索罪與罰的世界。",
+          "url": "/ore/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "ore"
+        },
+        {
+          "id": "sf2",
+          "title": "魔法冒險世界Ⅱ",
+          "description": "魔法與冒險的奇幻世界，展開你的魔法旅程。",
+          "url": "/sf2/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "sf2"
+        },
+        {
+          "id": "seaii",
+          "title": "航海時代加強版",
+          "description": "航海時代加強版，探索大海的奧秘，建立貿易帝國。",
+          "url": "/seaii/",
+          "category": "冒險",
+          "players": "線上多人",
+          "image": "sea"
+        },
+        {
+          "id": "sea",
+          "title": "航海時代",
+          "description": "經典航海時代遊戲，開啟你的航海冒險。",
+          "url": "/sea/",
+          "category": "冒險",
+          "players": "線上多人",
+          "image": "sea"
+        },
+        {
+          "id": "br",
+          "title": "大逃殺",
+          "description": "生存競技遊戲，成為最後的倖存者。",
+          "url": "/br",
+          "category": "對戰",
+          "players": "多人對戰",
+          "image": "br"
+        },
+        {
+          "id": "ogame",
+          "title": "OGame (2021)",
+          "description": "銀河帝國策略遊戲，建立你的太空帝國。",
+          "url": "https://star.jkgame.com",
+          "category": "策略",
+          "players": "線上多人",
+          "image": "ogame"
+        },
+        {
+          "id": "msvs",
+          "title": "機械人大戰 MSVS",
+          "description": "日本制作的經典遊戲，2004年改為中文版，繼續服務所有希望重溫的玩家。",
+          "url": "/msvs",
+          "category": "策略",
+          "players": "策略對戰",
+          "image": "mecha-battle"
+        },
+        {
+          "id": "epet",
+          "title": "寵物大作戰",
+          "description": "收集和培養寵物，參與激烈的寵物對戰。",
+          "url": "/epet/",
+          "category": "養成",
+          "players": "線上對戰",
+          "image": "epet"
+        },
+        {
+          "id": "wor",
+          "title": "光明世界",
+          "description": "光明與黑暗的對決，選擇你的陣營。",
+          "url": "/wor/",
+          "category": "RPG",
+          "players": "線上多人",
+          "image": "wor"
         }
       ]
     },
@@ -237,6 +856,15 @@
           "category": "策略",
           "players": "線上對戰",
           "image": "ebs-battle"
+        },
+        {
+          "id": "epet",
+          "title": "寵物大作戰",
+          "description": "收集和培養寵物，參與激烈的寵物對戰。",
+          "url": "/epet/",
+          "category": "養成",
+          "players": "線上對戰",
+          "image": "epet"
         }
       ]
     },
