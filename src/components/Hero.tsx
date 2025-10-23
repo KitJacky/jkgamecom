@@ -1,29 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Gamepad2, Sparkles } from "lucide-react";
+import { GLSLHills } from "@/components/ui/glsl-hills";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/10 to-accent/10" />
-      
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-primary/20 animate-float"
-            style={{
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${Math.random() * 4 + 3}s`,
-            }}
-          />
-        ))}
+      {/* GLSL Hills animated background */}
+      <div className="absolute inset-0">
+        <GLSLHills />
       </div>
+      
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-primary/20 to-accent/20" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
