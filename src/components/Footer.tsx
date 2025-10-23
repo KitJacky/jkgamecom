@@ -79,7 +79,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 1997 - 2025 JKGame.com @ JackyKit. All rights reserved.
+              © 1997 - 2025 JKGame.com @ <a href="https://jackykit.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">JackyKit</a>. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground">
               共 31+ 款經典遊戲
