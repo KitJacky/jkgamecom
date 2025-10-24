@@ -1,100 +1,116 @@
-import { Facebook } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Facebook, Gamepad2 } from "lucide-react";
+import { TextHoverEffect, FooterBackgroundGradient } from "@/components/ui/hover-footer";
 
 export const Footer = () => {
-  const { ref, isVisible } = useScrollAnimation(0.2);
-  
+  const footerLinks = [
+    {
+      title: "熱門遊戲",
+      links: [
+        { label: "JK 江湖", href: "http://jky.jkgame.com" },
+        { label: "DOS 遊戲", href: "http://dos.jkgame.com" },
+        { label: "機械人大戰", href: "/msvs" },
+        { label: "三國演義", href: "#sangoku" },
+      ],
+    },
+    {
+      title: "快速連結",
+      links: [
+        { label: "討論區", href: "http://discuss.la", external: true },
+        { label: "JK SITE", href: "http://jk.hk", external: true },
+        { label: "Web Hosting", href: "http://jknet.hk", external: true },
+      ],
+    },
+    {
+      title: "資源",
+      links: [
+        { label: "金庸－鐵心網備份", href: "/iron/", external: true },
+        { label: "遊戲總覽", href: "#games" },
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    { 
+      icon: <Facebook size={20} />, 
+      label: "Facebook", 
+      href: "https://www.facebook.com/groups/74937612206/" 
+    },
+  ];
+
   return (
-    <footer ref={ref} className="relative border-t border-border/50 bg-card/30 backdrop-blur-sm py-12">
-      <div className={`container mx-auto px-4 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-4">
-              JKGame.com
-            </h3>
-            <p className="text-sm text-muted-foreground mb-4">
+    <footer className="bg-background/10 relative h-fit rounded-3xl overflow-hidden m-8">
+      <div className="max-w-7xl mx-auto p-14 z-40 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
+          {/* Brand section */}
+          <div className="flex flex-col space-y-4">
+            <div className="flex items-center space-x-2">
+              <Gamepad2 className="w-8 h-8 text-primary" />
+              <span className="text-foreground text-3xl font-bold font-orbitron">JKGame</span>
+            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground">
               自 1997 年以來為玩家提供經典網頁遊戲服務
             </p>
-            <div className="flex gap-4">
-              <a 
-                href="https://www.facebook.com/groups/74937612206/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/50 flex items-center justify-center transition-all duration-500 hover:scale-125 hover:shadow-[0_0_20px_hsl(263_70%_50%/0.5)] transform"
-              >
-                <Facebook className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">快速連結</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="http://jky.jkgame.com" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  JK 江湖
-                </a>
-              </li>
-              <li>
-                <a href="http://dos.jkgame.com" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  DOS 遊戲
-                </a>
-              </li>
-              <li>
-                <a href="/msvs" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  機械人大戰
-                </a>
-              </li>
-              <li>
-                <a href="http://discuss.la" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  討論區
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">資源</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="/iron/" target="_blank" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  金庸－鐵心網備份
-                </a>
-              </li>
-              <li>
-                <a href="http://jk.hk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  JK SITE
-                </a>
-              </li>
-              <li>
-                <a href="http://jknet.hk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
-                  Web Hosting Services
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="pt-8 border-t border-border/50">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © 1997 - 2025 JKGame.com @ <a href="https://jackykit.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">JackyKit</a>. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary/80">
               共 31+ 款經典遊戲
             </p>
           </div>
+
+          {/* Footer link sections */}
+          {footerLinks.map((section) => (
+            <div key={section.title}>
+              <h4 className="text-foreground text-lg font-semibold mb-6 font-orbitron">
+                {section.title}
+              </h4>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.label} className="relative">
+                    <a
+                      href={link.href}
+                      {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
+                      className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <hr className="border-t border-border/50 my-8" />
+
+        {/* Footer bottom */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+          {/* Social icons */}
+          <div className="flex space-x-6">
+            {socialLinks.map(({ icon, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/50 flex items-center justify-center transition-all duration-500 hover:scale-125 hover:shadow-[0_0_20px_hsl(263_70%_50%/0.5)] transform text-primary"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+
+          {/* Copyright */}
+          <p className="text-center md:text-left text-muted-foreground">
+            © 1997 - 2025 JKGame.com @ <a href="https://jackykit.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">JackyKit</a>. All rights reserved.
+          </p>
         </div>
       </div>
 
-      {/* Glow effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+      {/* Text hover effect */}
+      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36">
+        <TextHoverEffect text="JKGame" className="z-50" />
+      </div>
+
+      <FooterBackgroundGradient />
     </footer>
   );
 };
