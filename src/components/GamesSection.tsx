@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import gamesData from "@/data/games.json";
 import type { GamesData } from "@/types/game";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 // Import all images
 import jkJianghuImg from "@/assets/jk-jianghu.jpg";
@@ -51,6 +52,7 @@ const typedGamesData = gamesData as GamesData;
 export const GamesSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTab, setActiveTab] = useState("all");
+  const { ref, isVisible } = useScrollAnimation(0.1);
 
   const filterGames = (games: typeof typedGamesData.categories.featured.games) => {
     if (!searchTerm) return games;
@@ -63,12 +65,14 @@ export const GamesSection = () => {
   };
 
   return (
-    <section id="games" className="py-20 px-4 relative">
+    <section id="games" ref={ref} className="py-20 px-4 relative">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-12 animate-fade-in">
+        <div className={`text-center mb-12 transition-all duration-700 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             遊戲大全
           </h2>
@@ -107,7 +111,7 @@ export const GamesSection = () => {
           </div>
 
           {Object.entries(typedGamesData.categories).map(([key, category]) => (
-            <TabsContent key={key} value={key} className="animate-fade-in">
+            <TabsContent key={key} value={key} className="transition-all duration-500 data-[state=active]:animate-fade-in">
               <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
                 {category.name}
               </h3>
@@ -121,8 +125,11 @@ export const GamesSection = () => {
                   {filterGames(category.games).map((game, index) => (
                     <div
                       key={game.id}
-                      className="animate-fade-in-up"
-                      style={{ animationDelay: `${index * 0.1}s` }}
+                      className="transition-all duration-700 transform opacity-0 translate-y-10"
+                      style={{ 
+                        animation: 'fade-in-up 0.6s ease-out forwards',
+                        animationDelay: `${index * 0.1}s` 
+                      }}
                     >
                       <GameCard
                         title={game.title}

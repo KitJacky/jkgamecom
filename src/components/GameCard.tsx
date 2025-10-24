@@ -13,7 +13,7 @@ interface GameCardProps {
 
 export const GameCard = ({ title, description, image, link, players, category }: GameCardProps) => {
   return (
-    <Card className="group relative overflow-hidden bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_32px_hsl(0_0%_0%/0.4)]">
+    <Card className="group relative overflow-hidden bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_12px_48px_hsl(263_70%_50%/0.3)] hover:-translate-y-2 transform">
       {/* Category badge */}
       <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-xs font-medium text-primary-foreground">
         {category}
@@ -50,7 +50,7 @@ export const GameCard = ({ title, description, image, link, players, category }:
           <Button 
             asChild
             size="sm"
-            className="ml-auto bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground border border-primary/50 transition-all duration-300"
+            className="ml-auto bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground border border-primary/50 transition-all duration-300 hover:scale-110 transform hover:shadow-[0_0_20px_hsl(263_70%_50%/0.5)]"
           >
             <a href={link} target="_blank" rel="noopener noreferrer">
               開始遊戲

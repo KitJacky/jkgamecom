@@ -1,9 +1,14 @@
 import { Facebook } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Footer = () => {
+  const { ref, isVisible } = useScrollAnimation(0.2);
+  
   return (
-    <footer className="relative border-t border-border/50 bg-card/30 backdrop-blur-sm py-12">
-      <div className="container mx-auto px-4">
+    <footer ref={ref} className="relative border-t border-border/50 bg-card/30 backdrop-blur-sm py-12">
+      <div className={`container mx-auto px-4 transition-all duration-700 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
@@ -18,9 +23,9 @@ export const Footer = () => {
                 href="https://www.facebook.com/groups/74937612206/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 border border-primary/50 flex items-center justify-center transition-all duration-500 hover:scale-125 hover:shadow-[0_0_20px_hsl(263_70%_50%/0.5)] transform"
               >
-                <Facebook className="w-5 h-5 text-primary" />
+                <Facebook className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
@@ -30,22 +35,22 @@ export const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">快速連結</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="http://jky.jkgame.com" className="hover:text-primary transition-colors">
+                <a href="http://jky.jkgame.com" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   JK 江湖
                 </a>
               </li>
               <li>
-                <a href="http://dos.jkgame.com" className="hover:text-primary transition-colors">
+                <a href="http://dos.jkgame.com" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   DOS 遊戲
                 </a>
               </li>
               <li>
-                <a href="/msvs" className="hover:text-primary transition-colors">
+                <a href="/msvs" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   機械人大戰
                 </a>
               </li>
               <li>
-                <a href="http://discuss.la" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="http://discuss.la" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   討論區
                 </a>
               </li>
@@ -57,17 +62,17 @@ export const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">資源</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/iron/" target="_blank" className="hover:text-primary transition-colors">
+                <a href="/iron/" target="_blank" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   金庸－鐵心網備份
                 </a>
               </li>
               <li>
-                <a href="http://jk.hk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="http://jk.hk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   JK SITE
                 </a>
               </li>
               <li>
-                <a href="http://jknet.hk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="http://jknet.hk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 hover:translate-x-2 inline-block transform">
                   Web Hosting Services
                 </a>
               </li>

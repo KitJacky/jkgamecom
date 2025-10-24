@@ -36,7 +36,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_hsl(263_90%_65%/0.6)]"
+              className="group relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-xl transition-all duration-500 hover:scale-110 hover:shadow-[0_0_60px_hsl(263_90%_65%/0.8)] transform animate-glow-pulse"
               onClick={() => {
                 const gamesSection = document.getElementById("games");
                 if (gamesSection) {
@@ -51,7 +51,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-primary/50 hover:bg-primary/10 text-foreground px-8 py-6 text-lg rounded-xl transition-all duration-300"
+              className="border-primary/50 hover:bg-primary/10 hover:border-primary text-foreground px-8 py-6 text-lg rounded-xl transition-all duration-500 hover:scale-105 transform"
               onClick={() => {
                 const gamesSection = document.getElementById("games");
                 if (gamesSection) {
