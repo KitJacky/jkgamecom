@@ -16,6 +16,8 @@ export const Footer = () => {
       title: "快速連結",
       links: [
         { label: "討論區", href: "http://discuss.la", external: true },
+        { label: "Facebook", href: "https://www.facebook.com/groups/74937612206/", external: true },
+        { label: "Jacky Kit", href: "https://jackykit.com", external: true },
         { label: "JK SITE", href: "http://jk.hk", external: true },
         { label: "Web Hosting", href: "http://jknet.hk", external: true },
       ],
