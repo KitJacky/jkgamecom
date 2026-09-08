@@ -146,7 +146,7 @@ export const GamesSection = () => {
                           title={game.title}
                           description={game.description}
                           image={imageMap[game.image] || imageMap["jk-jianghu"]}
-                          link={game.url}
+                          link={`/game/${game.id}`}
                           players={game.players}
                           category={game.category}
                           featured={featured}

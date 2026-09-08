@@ -1,4 +1,5 @@
 import { ArrowUpRight, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface GameCardProps {
   title: string;
@@ -20,10 +21,8 @@ export const GameCard = ({
   featured = false,
 }: GameCardProps) => {
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={link}
       className="group relative block h-full min-h-[240px] overflow-hidden rounded-3xl border border-border/60 bg-surface/80 transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_18px_60px_hsl(263_70%_50%/0.3)]"
     >
       {/* Image */}
@@ -73,6 +72,6 @@ export const GameCard = ({
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
