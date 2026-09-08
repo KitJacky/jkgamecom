@@ -70,77 +70,90 @@ export const GamesSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
       <div className="container mx-auto relative z-10">
-        <div className={`text-center mb-12 transition-all duration-700 transform ${
+        <div className={`flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 transition-all duration-700 transform ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-            遊戲大全
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            探索我們的經典遊戲收藏 - 共 {Object.values(typedGamesData.categories).reduce((acc, cat) => acc + cat.games.length, 0)} 款遊戲
-          </p>
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-secondary">All Games</span>
+            <h2 className="font-display text-4xl md:text-5xl text-foreground mt-2">
+              遊戲<span className="text-primary">大全</span>
+            </h2>
+            <p className="text-muted-foreground mt-2">
+              共 {Object.values(typedGamesData.categories).reduce((acc, cat) => acc + cat.games.length, 0)} 款經典遊戲，免下載直接玩
+            </p>
+          </div>
 
           {/* Search bar */}
-          <div className="max-w-md mx-auto mb-8">
+          <div className="w-full md:w-80">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 type="text"
                 placeholder="搜尋遊戲..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 bg-card/50 backdrop-blur-sm border-primary/20 focus:border-primary/50"
+                className="pl-10 h-11 rounded-xl bg-surface/80 backdrop-blur-sm border-border/60 focus:border-primary/60"
               />
             </div>
           </div>
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <div className="flex justify-center mb-12">
-            <TabsList className="inline-flex flex-wrap gap-2 h-auto bg-card/50 backdrop-blur-sm p-2">
-              <TabsTrigger value="all" className="min-w-[80px]">全部</TabsTrigger>
-              <TabsTrigger value="featured" className="min-w-[80px]">精選</TabsTrigger>
-              <TabsTrigger value="strategy" className="min-w-[80px]">策略</TabsTrigger>
-              <TabsTrigger value="rpg" className="min-w-[80px]">RPG</TabsTrigger>
-              <TabsTrigger value="simulation" className="min-w-[80px]">模擬</TabsTrigger>
-              <TabsTrigger value="battle" className="min-w-[80px]">對戰</TabsTrigger>
-              <TabsTrigger value="jk-series" className="min-w-[80px]">JK系列</TabsTrigger>
-              <TabsTrigger value="hako" className="min-w-[80px]">箱庭</TabsTrigger>
-              <TabsTrigger value="ebs" className="min-w-[80px]">EBS</TabsTrigger>
+          <div className="mb-8 border-y border-border/50 py-4">
+            <TabsList className="inline-flex flex-wrap gap-2 h-auto bg-transparent p-0">
+              {[
+                ["all", "全部"],
+                ["featured", "精選"],
+                ["strategy", "策略"],
+                ["rpg", "RPG"],
+                ["simulation", "模擬"],
+                ["battle", "對戰"],
+                ["jk-series", "JK系列"],
+                ["hako", "箱庭"],
+                ["ebs", "EBS"],
+              ].map(([value, label]) => (
+                <TabsTrigger
+                  key={value}
+                  value={value}
+                  className="rounded-full px-5 py-2 text-sm font-semibold bg-foreground/5 border border-border/60 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-primary data-[state=active]:shadow-[0_0_20px_hsl(263_70%_50%/0.4)] transition-all"
+                >
+                  {label}
+                </TabsTrigger>
+              ))}
             </TabsList>
           </div>
 
           {Object.entries(typedGamesData.categories).map(([key, category]) => (
             <TabsContent key={key} value={key} className="transition-all duration-500 data-[state=active]:animate-fade-in">
-              <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
-                {category.name}
-              </h3>
-              
               {filterGames(category.games).length === 0 ? (
                 <div className="text-center py-12">
                   <p className="text-muted-foreground text-lg">找不到符合的遊戲</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filterGames(category.games).map((game, index) => (
-                    <div
-                      key={game.id}
-                      className="transition-all duration-700 transform opacity-0 translate-y-10"
-                      style={{ 
-                        animation: 'fade-in-up 0.6s ease-out forwards',
-                        animationDelay: `${index * 0.1}s` 
-                      }}
-                    >
-                      <GameCard
-                        title={game.title}
-                        description={game.description}
-                        image={imageMap[game.image] || imageMap["jk-jianghu"]}
-                        link={game.url}
-                        players={game.players}
-                        category={game.category}
-                      />
-                    </div>
-                  ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[240px]">
+                  {filterGames(category.games).map((game, index) => {
+                    const featured = index === 0 || index === 7;
+                    return (
+                      <div
+                        key={game.id}
+                        className={`opacity-0 ${featured ? "sm:col-span-2 lg:row-span-2" : ""}`}
+                        style={{
+                          animation: 'fade-in-up 0.6s ease-out forwards',
+                          animationDelay: `${Math.min(index, 12) * 0.06}s`
+                        }}
+                      >
+                        <GameCard
+                          title={game.title}
+                          description={game.description}
+                          image={imageMap[game.image] || imageMap["jk-jianghu"]}
+                          link={game.url}
+                          players={game.players}
+                          category={game.category}
+                          featured={featured}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </TabsContent>
