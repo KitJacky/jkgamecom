@@ -136,7 +136,7 @@ export const GamesSection = () => {
                     return (
                       <div
                         key={game.id}
-                        className={`opacity-0 ${featured ? "sm:col-span-2 lg:row-span-2" : ""}`}
+                        className={`opacity-0 h-full ${featured ? "sm:col-span-2 lg:row-span-2" : ""}`}
                         style={{
                           animation: 'fade-in-up 0.6s ease-out forwards',
                           animationDelay: `${Math.min(index, 12) * 0.06}s`
