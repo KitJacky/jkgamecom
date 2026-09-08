@@ -11,6 +11,9 @@ All colors MUST be HSL.
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
+    --surface: 240 24% 12%;
+    --surface-elevated: 240 30% 14%;
+
     --card: 240 10% 8%;
     --card-foreground: 0 0% 98%;
 
@@ -72,6 +75,15 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-orbitron;
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .bento-tile {
+    @apply rounded-3xl border border-border/60 bg-surface/80 backdrop-blur-sm transition-all duration-500;
+  }
+  .bento-tile:hover {
+    @apply border-primary/50 shadow-[0_18px_60px_hsl(263_70%_50%/0.25)] -translate-y-1;
   }
 }
