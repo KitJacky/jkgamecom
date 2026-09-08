@@ -4,10 +4,7 @@ import type { GamesData } from "@/types/game";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const typedGamesData = gamesData as GamesData;
-const totalGames = Object.values(typedGamesData.categories).reduce(
-  (acc, cat) => acc + cat.games.length,
-  0
-);
+const totalGames = typedGamesData.categories.all.games.length;
 
 export const StatsSection = () => {
   const { ref, isVisible } = useScrollAnimation(0.2);

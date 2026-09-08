@@ -79,7 +79,7 @@ export const GamesSection = () => {
               遊戲<span className="text-primary">大全</span>
             </h2>
             <p className="text-muted-foreground mt-2">
-              共 {Object.values(typedGamesData.categories).reduce((acc, cat) => acc + cat.games.length, 0)} 款經典遊戲，免下載直接玩
+              共 {typedGamesData.categories.all.games.length} 款經典遊戲，免下載直接玩
             </p>
           </div>
 
