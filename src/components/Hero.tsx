@@ -23,11 +23,11 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-primary/20" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[130px] animate-fade-in-up">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[minmax(150px,auto)] animate-fade-in-up">
           {/* Hero tile */}
-          <div className="md:col-span-3 md:row-span-2 relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-surface-elevated/90 to-background/90 backdrop-blur-md p-8 md:p-10 flex flex-col justify-end">
-            <div className="absolute top-0 right-4 opacity-[0.08] pointer-events-none select-none">
-              <span className="font-display text-[7rem] md:text-[10rem] leading-none tracking-tighter text-foreground">
+          <div className="md:col-span-3 md:row-span-2 md:min-h-[440px] relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-surface-elevated/90 to-background/90 backdrop-blur-md p-8 md:p-10 flex flex-col justify-end">
+            <div className="absolute -bottom-6 right-2 opacity-[0.06] pointer-events-none select-none">
+              <span className="font-display text-[7rem] md:text-[11rem] leading-none tracking-tighter text-foreground">
                 1997
               </span>
             </div>
