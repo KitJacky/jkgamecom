@@ -15,9 +15,14 @@ export default {
     extend: {
       fontFamily: {
         'orbitron': ['Orbitron', 'sans-serif'],
-        'sans': ['Noto Sans TC', 'sans-serif'],
+        'display': ['Archivo Black', 'Noto Sans TC', 'sans-serif'],
+        'sans': ['Hind', 'Noto Sans TC', 'sans-serif'],
       },
       colors: {
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          elevated: "hsl(var(--surface-elevated))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
